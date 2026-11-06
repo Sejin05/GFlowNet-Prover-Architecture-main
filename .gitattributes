@@ -1,0 +1,23 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Markdown and code files enforce clean LF for consistent GitHub rendering
+*.md text eol=lf
+*.py text eol=lf
+*.rs text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.sol text eol=lf
+*.sh text eol=lf
+
+# Windows-specific scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files
+*.safetensors binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
