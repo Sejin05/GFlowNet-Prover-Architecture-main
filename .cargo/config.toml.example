@@ -1,0 +1,21 @@
+# Example Cargo Configuration for GFlowNet-Prover
+#
+# On Linux or inside Docker (x86_64-unknown-linux-gnu):
+#   No custom .cargo/config.toml is required. System GCC/Clang is automatically selected.
+#
+# On Windows with MinGW (x86_64-pc-windows-gnu):
+#   If building with the self-contained toolchain bundled in rustup, you can either:
+#   1. Run `powershell -File scripts/setup_env.ps1` to configure environment variables dynamically, OR
+#   2. Copy this file to `.cargo/config.toml` and adjust your toolchain paths below:
+
+[target.x86_64-pc-windows-gnu]
+# linker = "x86_64-w64-mingw32-gcc.exe"
+rustflags = [
+    "--cfg", "getrandom_backend=\"windows_legacy\""
+]
+
+[target.x86_64-unknown-linux-gnu]
+rustflags = [
+    "-C", "target-cpu=haswell",
+    "-C", "lto=thin"
+]

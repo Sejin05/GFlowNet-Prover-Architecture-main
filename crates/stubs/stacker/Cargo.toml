@@ -1,0 +1,10 @@
+[package]
+name = "stacker"
+version = "0.1.25"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Stacker stub for pure Rust environments"
+
+[lib]
+name = "stacker"
+path = "src/lib.rs"

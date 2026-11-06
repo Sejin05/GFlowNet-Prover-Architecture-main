@@ -1,0 +1,24 @@
+[package]
+name = "gfn-invariants"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+gfn-common = { workspace = true }
+gfn-extractor = { workspace = true }
+alloy-primitives = { workspace = true }
+tch = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+
+[dev-dependencies]
+criterion = { workspace = true }
+
+[[bench]]
+name = "invariant_eval_bench"
+harness = false
+

@@ -1,0 +1,44 @@
+# Default Phase 3 Online Adaptation & Audit Configuration
+
+[project_source]
+workspace_path = "."
+setup_contract = "ExploitHarnessTest"
+setup_function = "setUp"
+target_contracts = []
+
+[foundry_profile]
+solc_version = "0.8.24"
+evm_version = "cancun"
+fork_block_number = 18000000
+
+[search_budget]
+max_trajectories = 100000
+max_depth = 15
+batch_size = 64
+wall_clock_timeout_sec = 900
+smt_timeout_ms = 5000
+enable_online_adaptation = true
+
+[reward]
+alpha_boundary = 1.0
+beta_novelty = 0.5
+gamma_exploit = 100.0
+m_unsat_penalty = 1e-3
+r_min = 1e-6
+lambda_boundary = 5.0
+
+[symbolic]
+boundary_trigger = 0.85
+max_smt_workers = 6
+enable_unsat_cache = true
+lmdb_cache_path = "/var/cache/gfn-prover/lmdb"
+
+[model]
+rgat_hidden_dim = 512
+rgat_num_layers = 6
+rgat_heads = 8
+temperature = 1.0
+epsilon_uniform = 0.05
+
+[verifier]
+patch_format = "require"

@@ -1,0 +1,31 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Foundry / Solidity build artifacts & cache
+**/out/
+**/cache/
+
+# Python virtual environments & bytecode
+**/__pycache__/
+*.py[cod]
+*$py.class
+**/.venv/
+**/venv/
+**/env/
+**/.pytest_cache/
+**/dist/
+**/build/
+
+# IDE & Editor configs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output directory (optional generated reports/runs)
+/audit_out/

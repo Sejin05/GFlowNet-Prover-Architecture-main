@@ -1,0 +1,20 @@
+[package]
+name = "gfn-extractor"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+gfn-common = { workspace = true }
+alloy-primitives = { workspace = true }
+foundry-compilers = { workspace = true }
+petgraph = { workspace = true }
+tch = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+blake3 = { workspace = true }
+xxhash-rust = { workspace = true }
+thiserror = { workspace = true }

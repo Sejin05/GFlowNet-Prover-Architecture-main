@@ -1,0 +1,12 @@
+[package]
+name = "heed"
+version = "0.20.5"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "High-performance Pure-Rust LMDB compatible store for GFlowNet-Prover"
+
+[dependencies]
+parking_lot = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

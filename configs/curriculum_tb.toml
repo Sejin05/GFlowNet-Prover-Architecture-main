@@ -1,0 +1,57 @@
+# Phase 2 Trajectory Balance Bug-Discovery Curriculum Configuration
+
+[model]
+rgat_hidden_dim = 512
+rgat_num_layers = 6
+rgat_heads = 8
+hgt_hidden_dim = 512
+hgt_num_layers = 4
+hgt_heads = 8
+
+[optim]
+lr_policy = 3e-4
+lr_log_z = 5e-3
+lr_warmup_steps = 2000
+lr_min = 1e-5
+weight_decay = 1e-4
+clip_grad_norm = 1.0
+
+[reward]
+alpha_boundary = 1.0
+beta_novelty = 0.5
+gamma_exploit = 100.0
+m_unsat_penalty = 1e-3
+r_min = 1e-6
+lambda_boundary = 5.0
+
+[rollout]
+max_steps = 15
+batch_size = 64
+temperature = 1.0
+epsilon_uniform = 0.05
+num_workers = 8
+
+[replay_buffer]
+capacity = 100000
+alpha_per = 0.6
+beta_per = 0.4
+eps_per = 1e-5
+
+[tb_loss]
+huber_delta = 10.0
+reward_min = 1e-6
+max_residual_clip = 100.0
+
+[stability]
+ema_decay = 0.95
+logit_clip_bound = 30.0
+entropy_reg_coeff = 0.01
+target_entropy_nats = 0.35
+enable_grad_spike_guard = true
+spike_damp_factor = 0.5
+max_fisher_clip = 10000.0
+rnd_winsorize_z = 5.0
+
+[symbolic]
+boundary_trigger = 0.85
+smt_timeout_ms = 5000

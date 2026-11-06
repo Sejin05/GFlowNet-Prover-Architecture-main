@@ -1,0 +1,13 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+ast = true
+extra_output = ["storageLayout"]
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+]

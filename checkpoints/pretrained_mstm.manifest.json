@@ -1,0 +1,30 @@
+{
+  "architecture": "StateGraphRgatEncoder + AutoregressiveForwardPolicyHead",
+  "blake3_hash": "262b32b2cedffe55e868d1cd8078348274bf63351d05a2928bdd06bb7e3466d5",
+  "corpus": {
+    "feature_dim": 16,
+    "hidden_dim": 16,
+    "trajectories_evaluated": 8,
+    "workspaces_loaded": 2
+  },
+  "metrics": {
+    "contrastive_likelihood_ratio": 0.9748103483317508,
+    "final_ema_loss": 0.1069935680388689,
+    "final_loss": 0.10990718438477669,
+    "initial_loss": 0.11822895967442591,
+    "learned_log_z": 2.5,
+    "mean_hardened_trajectory_prob": 0.12659443485861366,
+    "mean_vulnerable_trajectory_prob": 0.12340556514138633,
+    "spearman_rho": -0.1091089451179962,
+    "steps_executed": 200
+  },
+  "phase": "MSTM_PRETRAIN",
+  "stability": {
+    "clip_grad_norm": 1.0,
+    "ema_decay": 0.95,
+    "final_ema_tb_loss": 0.1069935680388689,
+    "grad_clip_events": 0,
+    "lr_warmup_steps": 100,
+    "spike_damp_events": 0
+  }
+}

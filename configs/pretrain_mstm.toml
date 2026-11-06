@@ -1,0 +1,37 @@
+# Phase 1 Masked State-Transition Modeling Pre-training Configuration
+
+[training]
+dataset_path = "/data/gfn_pretrain_corpus"
+num_contracts = 52400
+batch_size = 64
+num_epochs = 20
+mask_ratio = 0.30
+seed = 42
+
+[optim]
+lr = 3e-4
+lr_warmup_steps = 2000
+weight_decay = 1e-4
+clip_grad_norm = 1.0
+beta1 = 0.9
+beta2 = 0.999
+eps = 1e-8
+
+[model]
+hidden_dim = 512
+num_layers = 6
+num_heads = 8
+edge_attr_dim = 16
+dropout = 0.1
+precision = "bfloat16"
+
+[loss]
+weight_bce_mutation = 1.0
+weight_ce_direction = 0.5
+weight_huber_delta = 1.0
+huber_delta = 1.0
+
+[stability]
+ema_decay = 0.95
+logit_clip_bound = 30.0
+enable_grad_spike_guard = true

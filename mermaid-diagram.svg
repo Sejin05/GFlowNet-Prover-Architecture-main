@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190.3231666666666 1420" width="1190.3231666666666" height="1420" style="--bg:#18181B;--fg:#F4F4F5;--line:#71717A;--muted:#A1A1AA;--surface:#27272A;--border:#3F3F46;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="S1" data-label="Module 1: Extraction &amp; Invariants (crates/gfn-extractor &amp; gfn-invariants)">
+  <rect x="50.04" y="52" width="361.458" height="521.4" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="50.04" y="52" width="361.458" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="62.04" y="66" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Module 1: Extraction &amp; Invariants (crates/gfn-extractor &amp; gfn-invariants)</text>
+</g>
+<g class="subgraph" data-id="S2" data-label="Module 2: GFlowNet Engine (crates/gfn-engine)">
+  <rect x="107.91366666666673" y="633.4" width="635.1094999999999" height="266.70000000000005" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="107.91366666666673" y="633.4" width="635.1094999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="119.91366666666673" y="647.4" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Module 2: GFlowNet Engine (crates/gfn-engine)</text>
+</g>
+<g class="subgraph" data-id="S3" data-label="Module 3: EVM Execution &amp; SMT (crates/gfn-evm &amp; gfn-symbolic)">
+  <rect x="466.44483333333335" y="153.5" width="683.8783333333332" height="419.9" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="466.44483333333335" y="153.5" width="683.8783333333332" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="478.44483333333335" y="167.5" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Module 3: EVM Execution &amp; SMT (crates/gfn-evm &amp; gfn-symbolic)</text>
+</g>
+<g class="subgraph" data-id="S4" data-label="Module 4: Zero-FP Verifier &amp; Patch (crates/gfn-verifier)">
+  <rect x="624.9921666666667" y="960.1" width="394.0619999999999" height="419.9" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="624.9921666666667" y="960.1" width="394.0619999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="636.9921666666667" y="974.1" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Module 4: Zero-FP Verifier &amp; Patch (crates/gfn-verifier)</text>
+</g>
+<polyline class="edge" data-from="HSDG" data-to="RGAT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="230.769,387.6 230.769,411.6 285.6786666666667,411.6 285.6786666666667,677.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Action" data-to="RevmArena" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="285.6786666666667,884.1 285.6786666666667,918.1 40.03999999999999,918.1 40.03999999999999,40 1087.2598333333333,40 1087.2598333333333,399.6 903.4375,399.6 903.4375,435.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RevmArena" data-to="PoCSynth" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Invariant Shattered!" points="822.0231666666666,472.5 822.0231666666666,1004.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RNDReward" data-to="TBLoss" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="597.5268333333333,472.5 597.5268333333333,738.3 613.7936666666667,738.3 613.7936666666667,762.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SolCode" data-to="FComp" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="230.769,132.9 230.769,189.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FComp" data-to="Lift" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="230.769,226.1 230.769,274.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Lift" data-to="HSDG" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="230.769,311.00000000000006 230.769,350.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HSDG" data-to="HGT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="230.769,387.6 230.769,411.6 175.85933333333332,411.6 175.85933333333332,435.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HGT" data-to="Invariants" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="175.85933333333335,472.5 175.85933333333335,520.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="RGAT" data-to="Policy" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="285.6786666666667,714.3 285.6786666666667,762.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Policy" data-to="Action" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="285.6786666666667,799.2 285.6786666666667,847.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Replay" data-to="TBLoss" data-style="solid" data-arrow-start="true" data-arrow-end="true" points="545.3246666666666,714.3 545.3246666666666,738.3 613.7936666666667,738.3 613.7936666666667,762.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-start)" />
+<polyline class="edge" data-from="RevmArena" data-to="Inspector" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="903.4375,472.5 903.4375,484.5 933.4565,484.5 933.4565,520.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Inspector" data-to="Concolic" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Boundary &gt; 0.85" points="1033.8898333333332,520.5 1033.8898333333332,246.4 762.563,246.4 762.563,226.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Concolic" data-to="SMT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="706.8366666666667,226.1 706.8366666666667,246.4 660.443,246.4 660.443,274.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SMT" data-to="RevmArena" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="SAT: Concrete Witness" points="694.6046666666666,311.00000000000006 694.6046666666666,331.3 822.0231666666666,331.3 822.0231666666666,435.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SMT" data-to="RNDReward" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="UNSAT: Core Cache" points="626.2813333333334,311.00000000000006 626.2813333333334,331.3 597.5268333333333,331.3 597.5268333333333,435.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PoCSynth" data-to="ForgeGate" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="822.0231666666666,1041 822.0231666666666,1089" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ForgeGate" data-to="PatchSynth" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="PASS (FPR = 0%)" points="822.0231666666666,1125.9 822.0231666666666,1242.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PatchSynth" data-to="VerifiedFinding" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="822.0231666666666,1279.1 822.0231666666666,1327.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="RevmArena" data-to="PoCSynth" data-label="Invariant Shattered!">
+  <rect x="767.0231666666666" y="880.8000000000001" width="109.72000000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="821.8831666666666" y="895.95" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Invariant Shattered!</text>
+</g>
+<g class="edge-label" data-from="Inspector" data-to="Concolic" data-label="Boundary &gt; 0.85">
+  <rect x="986.3898333333333" y="362.30000000000007" width="94.87000000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1033.8248333333333" y="377.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Boundary &gt; 0.85</text>
+</g>
+<g class="edge-label" data-from="SMT" data-to="RevmArena" data-label="SAT: Concrete Witness">
+  <rect x="758.5231666666666" y="362.30000000000007" width="126.35200000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="821.6991666666667" y="377.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">SAT: Concrete Witness</text>
+</g>
+<g class="edge-label" data-from="SMT" data-to="RNDReward" data-label="UNSAT: Core Cache">
+  <rect x="540.5268333333333" y="362.30000000000007" width="113.87800000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="597.4658333333334" y="377.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">UNSAT: Core Cache</text>
+</g>
+<g class="edge-label" data-from="ForgeGate" data-to="PatchSynth" data-label="PASS (FPR = 0%)">
+  <rect x="773.0231666666667" y="1168.8999999999999" width="97.84000000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="821.9431666666667" y="1184.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">PASS (FPR = 0%)</text>
+</g>
+<g class="node" data-id="SolCode" data-label="Solidity Source (.sol)" data-shape="rectangle">
+  <rect x="149.773" y="96" width="161.99200000000002" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="230.769" y="114.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Solidity Source (.sol)</text>
+</g>
+<g class="node" data-id="FComp" data-label="foundry-compilers &amp; solar-parse" data-shape="rectangle">
+  <rect x="114.94600000000003" y="189.2" width="231.646" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="230.769" y="207.64999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">foundry-compilers &amp; solar-parse</text>
+</g>
+<g class="node" data-id="Lift" data-label="CFG Lifter &amp; SSA" data-shape="rectangle">
+  <rect x="160.5175" y="274.1" width="140.503" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="230.769" y="292.55" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">CFG Lifter &amp; SSA</text>
+</g>
+<g class="node" data-id="HSDG" data-label="Heterogeneous State-Dependency Graph (HSDG)" data-shape="rectangle">
+  <rect x="66.03999999999999" y="350.70000000000005" width="329.458" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="230.769" y="369.15000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Heterogeneous State-Dependency Graph (HSDG)</text>
+</g>
+<g class="node" data-id="HGT" data-label="HGT Invariant Synthesizer" data-shape="rectangle">
+  <rect x="77.07933333333335" y="435.6" width="197.55999999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="175.85933333333332" y="454.05" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">HGT Invariant Synthesizer</text>
+</g>
+<g class="node" data-id="Invariants" data-label="Safety Invariants I(s)" data-shape="rectangle">
+  <rect x="95.60433333333336" y="520.5" width="160.51" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="175.85933333333335" y="538.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Safety Invariants I(s)</text>
+</g>
+<g class="node" data-id="RGAT" data-label="6-Layer RGAT Encoder (h_t)" data-shape="rectangle">
+  <rect x="180.97066666666672" y="677.4" width="209.41599999999994" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="285.6786666666667" y="695.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">6-Layer RGAT Encoder (h_t)</text>
+</g>
+<g class="node" data-id="Policy" data-label="Autoregressive Forward Policy P_F(a_t | s_t)" data-shape="rectangle">
+  <rect x="132.43516666666673" y="762.3" width="306.4869999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="285.6786666666667" y="780.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Autoregressive Forward Policy P_F(a_t | s_t)</text>
+</g>
+<g class="node" data-id="Action" data-label="Action Batch (Caller, Function, Args, Time/Block)" data-shape="rectangle">
+  <rect x="123.91366666666673" y="847.2" width="323.5299999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="285.6786666666667" y="865.6500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Action Batch (Caller, Function, Args, Time/Block)</text>
+</g>
+<g class="node" data-id="Replay" data-label="Prioritized Replay Buffer (Sum-Tree)" data-shape="rectangle">
+  <rect x="418.38666666666666" y="677.4" width="253.87599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="545.3246666666666" y="695.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Prioritized Replay Buffer (Sum-Tree)</text>
+</g>
+<g class="node" data-id="TBLoss" data-label="Trajectory Balance Loss L_TB" data-shape="rectangle">
+  <rect x="500.56416666666667" y="762.3" width="226.459" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="613.7936666666667" y="780.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Trajectory Balance Loss L_TB</text>
+</g>
+<g class="node" data-id="RevmArena" data-label="RevmArena (revm CoW, 65k+ TPS)" data-shape="rectangle">
+  <rect x="740.6088333333333" y="435.6" width="244.243" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="862.7303333333333" y="454.05" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">RevmArena (revm CoW, 65k+ TPS)</text>
+</g>
+<g class="node" data-id="Inspector" data-label="GfnEvmInspector (JUMPI Branch Telemetry)" data-shape="rectangle">
+  <rect x="833.0231666666666" y="520.5" width="301.2999999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="983.6731666666666" y="538.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">GfnEvmInspector (JUMPI Branch Telemetry)</text>
+</g>
+<g class="node" data-id="Concolic" data-label="Concolic EVM Bridge" data-shape="rectangle">
+  <rect x="651.1103333333333" y="189.2" width="167.17899999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="734.6998333333333" y="207.64999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Concolic EVM Bridge</text>
+</g>
+<g class="node" data-id="SMT" data-label="Portfolio SMT (Bitwuzla / Z3)" data-shape="rectangle">
+  <rect x="557.958" y="274.1" width="204.96999999999994" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="660.443" y="292.55" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Portfolio SMT (Bitwuzla / Z3)</text>
+</g>
+<g class="node" data-id="RNDReward" data-label="RND &amp; Composite Reward R(s_n)" data-shape="rectangle">
+  <rect x="482.44483333333335" y="435.6" width="230.164" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="597.5268333333333" y="454.05" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">RND &amp; Composite Reward R(s_n)</text>
+</g>
+<g class="node" data-id="PoCSynth" data-label="PoC Synthesizer (ExploitPoC.t.sol)" data-shape="rectangle">
+  <rect x="700.2721666666666" y="1004.1" width="243.5019999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="822.0231666666666" y="1022.5500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">PoC Synthesizer (ExploitPoC.t.sol)</text>
+</g>
+<g class="node" data-id="ForgeGate" data-label="Concrete Forge Gate (forge test -vvvv)" data-shape="rectangle">
+  <rect x="689.8981666666666" y="1089" width="264.25" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="822.0231666666666" y="1107.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Concrete Forge Gate (forge test -vvvv)</text>
+</g>
+<g class="node" data-id="PatchSynth" data-label="AST Patch Synthesizer (Minimal Negated Precondition)" data-shape="rectangle">
+  <rect x="640.9921666666667" y="1242.2" width="362.0619999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="822.0231666666666" y="1260.65" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">AST Patch Synthesizer (Minimal Negated Precondition)</text>
+</g>
+<g class="node" data-id="VerifiedFinding" data-label="Verified Exploit &amp; Remediation Patch" data-shape="rectangle">
+  <rect x="697.3081666666667" y="1327.1" width="249.42999999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="822.0231666666666" y="1345.55" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Verified Exploit &amp; Remediation Patch</text>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+{
+  "corpus_version": "2.0.0",
+  "description": "Contrastive GFlowNet-Prover Smart Contract Training Corpus pairing vulnerable v1 DeFi contracts against defense-in-depth hardened v2 contracts.",
+  "workspaces": [
+    {
+      "id": "multi_bug_defi_protocol_v1",
+      "path": "tests/fixtures/multi_bug_defi_protocol",
+      "setup_contract": "ExploitHarness",
+      "label": "vulnerable",
+      "ground_truth_modes": [
+        {
+          "invariant_id": "INV_PRECISION_NEUTRALITY_01",
+          "contract": "VaultErc4626",
+          "entry_function": "deposit",
+          "reward": 100.0
+        },
+        {
+          "invariant_id": "INV_SOLVENCY_02",
+          "contract": "LendingMarket",
+          "entry_function": "borrow",
+          "reward": 100.0
+        },
+        {
+          "invariant_id": "INV_ACCESS_CONTROL_03",
+          "contract": "GovTimelock",
+          "entry_function": "setAdmin",
+          "reward": 100.0
+        },
+        {
+          "invariant_id": "INV_TIMELOCK_MONOTONICITY_04",
+          "contract": "GovTimelock",
+          "entry_function": "executeProposal",
+          "reward": 100.0
+        }
+      ]
+    },
+    {
+      "id": "secure_defi_protocol_v2",
+      "path": "contracts/secure_defi_protocol",
+      "setup_contract": "ExploitHarness",
+      "label": "hardened",
+      "ground_truth_modes": []
+    }
+  ]
+}

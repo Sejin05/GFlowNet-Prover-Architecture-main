@@ -1,0 +1,7 @@
+[target.x86_64-pc-windows-gnu]
+linker = "C:/Users/sowae/.rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/x86_64-pc-windows-gnu/bin/self-contained/x86_64-w64-mingw32-gcc.exe"
+rustflags = [
+    "-L", "native=C:/Users/sowae/.rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/x86_64-pc-windows-gnu/lib/self-contained",
+    "-C", "link-arg=-BC:/Users/sowae/.rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/x86_64-pc-windows-gnu/bin/self-contained/",
+    "--cfg", "getrandom_backend=\"windows_legacy\""
+]

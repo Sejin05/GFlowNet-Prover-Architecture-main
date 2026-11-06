@@ -1,0 +1,14 @@
+﻿[package]
+name = "torch-sys"
+version = "0.18.1"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+libc = "0.2"
+
+[features]
+default = []
+doc-only = []
+python-extension = []
+ureq = []

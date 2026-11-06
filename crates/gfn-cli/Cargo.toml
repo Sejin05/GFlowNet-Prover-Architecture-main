@@ -1,0 +1,60 @@
+[package]
+name = "gfn-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "gfn-forge"
+path = "src/main.rs"
+
+[dependencies]
+gfn-common = { workspace = true }
+gfn-extractor = { workspace = true }
+gfn-engine = { workspace = true }
+gfn-verifier = { workspace = true }
+gfn-monitor = { workspace = true }
+gfn-trading = { workspace = true }
+tokio = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+parking_lot = { workspace = true }
+thiserror = { workspace = true }
+axum = { workspace = true }
+utoipa = { workspace = true }
+futures-core = "0.3"
+tower = { version = "0.5.3", features = ["util"] }
+blake3 = { workspace = true }
+alloy-primitives = { workspace = true }
+
+[dev-dependencies]
+gfn-evm = { workspace = true }
+gfn-invariants = { workspace = true }
+gfn-symbolic = { workspace = true }
+proptest = { workspace = true }
+tch = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+
+[[test]]
+name = "end_to_end_audit_test"
+path = "../../tests/end_to_end_audit_test.rs"
+
+[[test]]
+name = "metamorphic_robustness_test"
+path = "../../tests/metamorphic_robustness_test.rs"
+
+[[test]]
+name = "fuzz_robustness_test"
+path = "../../tests/fuzz_robustness_test.rs"
+
+

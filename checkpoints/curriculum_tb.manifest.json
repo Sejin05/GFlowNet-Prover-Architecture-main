@@ -1,0 +1,78 @@
+{
+  "architecture": "StateGraphRgatEncoder + GFlowNetPolicyHead",
+  "phase": "Phase 2: Curriculum Trajectory Balance (TB)",
+  "steps_completed": 50,
+  "sha256_hash": "e3050bfc8d38fd968eb6bb1b6e6224f3474fda30323359d73c16c976ffe9ae09",
+  "corpus_samples": 8,
+  "final_metrics": {
+    "final_loss_tb": 9.886380272626371e-06,
+    "final_loss_ema": 0.45075164936370177,
+    "learned_log_z": 5.705590607022681,
+    "final_reward": 99.99899124641392,
+    "modes_discovered": 4,
+    "total_modes": 4,
+    "spearman_rho": 0.8728715609439696,
+    "policy_entropy_nats": 1.3802085513504123,
+    "grad_clip_events": 21,
+    "spike_damp_events": 13
+  },
+  "hyperparameters": {
+    "model": {
+      "rgat_hidden_dim": 512,
+      "rgat_num_layers": 6,
+      "rgat_heads": 8,
+      "hgt_hidden_dim": 512,
+      "hgt_num_layers": 4,
+      "hgt_heads": 8
+    },
+    "optim": {
+      "lr_policy": 0.0005,
+      "lr_log_z": 0.01,
+      "lr_warmup_steps": 20,
+      "lr_min": 1e-05,
+      "weight_decay": 0.0001,
+      "clip_grad_norm": 1.0
+    },
+    "reward": {
+      "alpha_boundary": 1.0,
+      "beta_novelty": 0.25,
+      "gamma_exploit": 50.0,
+      "m_unsat_penalty": 0.001,
+      "r_min": 1e-06,
+      "lambda_boundary": 5.0
+    },
+    "rollout": {
+      "max_steps": 15,
+      "batch_size": 16,
+      "temperature": 1.0,
+      "epsilon_uniform": 0.05,
+      "num_workers": 4
+    },
+    "replay_buffer": {
+      "capacity": 10000,
+      "alpha_per": 0.6,
+      "beta_per": 0.4,
+      "eps_per": 1e-05
+    },
+    "tb_loss": {
+      "huber_delta": 10.0,
+      "reward_min": 1e-06,
+      "max_residual_clip": 100.0
+    },
+    "stability": {
+      "ema_decay": 0.9,
+      "logit_clip_bound": 30.0,
+      "entropy_reg_coeff": 0.01,
+      "target_entropy_nats": 0.35,
+      "enable_grad_spike_guard": true
+    },
+    "symbolic": {
+      "boundary_trigger": 0.85,
+      "smt_timeout_ms": 5000
+    },
+    "continual": {
+      "lambda_ewc": 400.0,
+      "anchor_checkpoint": "checkpoints/pretrained_mstm.safetensors"
+    }
+  }
+}

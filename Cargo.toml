@@ -1,0 +1,108 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gfn-common",
+    "crates/gfn-extractor",
+    "crates/gfn-invariants",
+    "crates/gfn-evm",
+    "crates/gfn-symbolic",
+    "crates/gfn-engine",
+    "crates/gfn-verifier",
+    "crates/gfn-monitor",
+    "crates/gfn-cli",
+    "crates/gfn-trading",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82.0"
+license = "MIT OR Apache-2.0"
+authors = ["GFlowNet-Prover Contributors"]
+
+[workspace.dependencies]
+# Local workspace crates
+gfn-common = { path = "crates/gfn-common" }
+gfn-extractor = { path = "crates/gfn-extractor" }
+gfn-invariants = { path = "crates/gfn-invariants" }
+gfn-evm = { path = "crates/gfn-evm" }
+gfn-symbolic = { path = "crates/gfn-symbolic" }
+gfn-engine = { path = "crates/gfn-engine" }
+gfn-verifier = { path = "crates/gfn-verifier" }
+gfn-monitor = { path = "crates/gfn-monitor" }
+gfn-cli = { path = "crates/gfn-cli" }
+gfn-trading = { path = "crates/gfn-trading" }
+
+# Pinned Ethereum & EVM Ecosystem
+alloy-primitives = { version = "0.8.14", default-features = false, features = ["std", "serde"] }
+alloy-sol-types = { version = "0.8.14", features = ["json"] }
+alloy-dyn-abi = { version = "0.8.14" }
+alloy-json-abi = "0.8.14"
+revm = { version = "19.0.0", default-features = false, features = ["std", "portable"] }
+revm-inspectors = "0.12.0"
+foundry-compilers = { version = "0.11.0", default-features = false }
+svm-rs = { version = "0.5.12", default-features = false }
+foundry-evm = "1.0.0"
+foundry-config = "1.0.0"
+
+# AST, Parsing & Graph
+solar-parse = "0.1.2"
+solar-ast = "0.1.2"
+petgraph = "0.6.5"
+
+# Machine Learning & Tensors
+tch = { version = "0.18.0", default-features = false, features = ["doc-only"] }
+safetensors = "0.3.3"
+
+# SMT Solvers
+bitwuzla-sys = "0.6.0"
+z3 = "0.12.1"
+
+# Concurrency & Async Runtime
+rayon = "1.10.0"
+tokio = { version = "=1.41.1", features = ["full"] }
+crossbeam = "0.8.4"
+parking_lot = "=0.12.3"
+windows-sys = "=0.52.0"
+
+# Networking, API & Serialization
+axum = "0.7.9"
+tonic = "0.12.3"
+utoipa = "5.2.0"
+clap = { version = "=4.5.21", features = ["derive"] }
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.132"
+rkyv = { version = "0.7.44", features = ["validation", "uuid"] }
+uuid = { version = "=1.11.0", features = ["v4", "v5", "serde"] }
+
+# Caching, Storage & Hashing
+heed = "0.20.5"
+dashmap = "=6.1.0"
+xxhash-rust = { version = "0.8.12", features = ["xxh3"] }
+blake3 = { version = "1.5.4", features = ["pure"] }
+
+# Math, Randomness & Errors
+thiserror = "2.0.3"
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+
+# Telemetry & Monitoring
+metrics = "0.24.0"
+metrics-exporter-prometheus = "0.16.0"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["json", "env-filter"] }
+
+# Testing & Benchmarking
+proptest = "1.5.0"
+criterion = { version = "0.5.1", default-features = false }
+
+[patch.crates-io]
+zip = { path = "crates/stubs/zip" }
+stacker = { path = "crates/stubs/stacker" }
+anstyle-wincon = { path = "crates/stubs/anstyle-wincon" }
+home = { path = "crates/stubs/home" }
+torch-sys = { path = "crates/stubs/torch-sys" }
+heed = { path = "crates/stubs/heed" }
+metrics-exporter-prometheus = { path = "crates/stubs/metrics-exporter-prometheus" }
+utoipa = { path = "crates/stubs/utoipa" }
+
